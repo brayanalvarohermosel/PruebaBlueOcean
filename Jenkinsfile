@@ -20,7 +20,7 @@ pipeline {
         input(message: '¿Continuar a FIN?', ok: 'Continuar')
       }
     }
-    
+
     stage('Fin') {
       steps {
         echo 'FIN'
@@ -29,7 +29,6 @@ pipeline {
         bat 'echo terminado'
       }
     }
-
 
   }
 }
