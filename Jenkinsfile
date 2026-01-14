@@ -15,6 +15,12 @@ pipeline {
       }
     }
 
+    stage('Aprobacion') {
+      steps {
+        input(message: 'Â¿Continuar a FIN?', ok: 'Continuar')
+      }
+    }
+    
     stage('Fin') {
       steps {
         echo 'FIN'
@@ -24,11 +30,6 @@ pipeline {
       }
     }
 
-    stage('Aprobacion') {
-      steps {
-        input(message: '¿Continuar a FIN?', ok: 'Continuar')
-      }
-    }
 
   }
 }
