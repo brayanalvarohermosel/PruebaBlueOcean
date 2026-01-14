@@ -15,11 +15,7 @@ pipeline {
       }
     }
 
-    stage('Aprobacion') {
-      steps {
-        input(message: '¿Continuar a FIN?', ok: 'Continuar')
-      }
-    }
+    
 
     stage('Fin') {
       steps {
